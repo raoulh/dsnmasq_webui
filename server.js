@@ -69,7 +69,7 @@ function loadDnsmasqLeases() {
   	});
 }
 
-fs.watch('.', function (ev, filename) {
+fs.watch('/var/lib/misc', function (ev, filename) {
 	console.log('fs.watch event: ' + ev);
 	
 	if (filename == 'dnsmasq.leases') {
